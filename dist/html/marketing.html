@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <link rel="shortcut icon" href="../../assets/img/favicon/favicon.png" type="image/x-icon">  
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Marketing</title>
+<style>
+    
+    .points{
+      display: block;
+      margin-left: 20px;
+      margin-bottom: 5px;
+      color: var(--pango-green);
+    }
+  .btn{
+    background-color: var(--pango-green)!important;
+  }
+    :root {
+      --pango-green: #0C6B37; /* your site green */
+    }
+    .navbar {
+       height: 60px !important;
+      background-color: var(--pango-green);
+      z-index: 1030;
+      
+    }
+    .navbar .navbar-brand img { height: 30px; }
+    .navbar .nav-link { color: #fff; }
+    .navbar .nav-link:hover { background: rgba(255,255,255,0.06); }
+
+    /* Make the toggler icon visible on dark background (if using default icon) */
+    .navbar-toggler { border: none; }
+    .navbar-toggler-icon { filter: invert(1); }
+
+    /* IMPORTANT: Force vertical stacking for collapsed navbar-nav on small screens.
+       Bootstrap's .navbar-nav is a flex container; here we change its direction to column
+       when the collapse is used (<= lg breakpoint). */
+    @media (max-width: 991.98px) {
+      .navbar-collapse .navbar-nav {
+        flex-direction: column !important;
+        width: 100%;
+      }
+
+      /* Give the collapsed menu a matching background so items are readable */
+      .navbar-collapse {
+        background-color: var(--pango-green);
+        padding-bottom: 0.75rem;
+        
+      }
+      
+
+      /* Make links fill width and have comfortable vertical spacing */
+      .navbar-nav .nav-item { text-align: center; }
+      .navbar-nav .nav-link {
+        padding: 0.625rem 1rem;
+        width: 100%;
+      }
+    }
+
+    /* Desktop layout keeps horizontal menu */
+    @media (min-width: 992px) {
+      .navbar-collapse { background: none !important; padding: 0; }
+      .navbar-nav .nav-link { padding: .5rem 1rem;}
+    }
+</style>
+  <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="../../dist/css/pango.css">
+        <link rel="stylesheet" href="../../dist/css/styles.css">
+        
+<link rel="stylesheet" href="../css/bootstrap.css">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- External custom theme (optional) -->
+  <link rel="stylesheet" href="pangolins-theme.css">
+</head>
+
+<body class="bg-light text-dark" style="font-family: 'Inter', sans-serif;">
+
+  
+  
+       <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" >
+    <div class="container">
+      <a class="navbar-brand" href="../../index.html">
+       <img loading="lazy" src="../../assets/img/icon/logo-all-white.png" alt="The Pangolins Icon"
+                                width="120">
+      </a>
+
+      <!-- Using a simple button with a Bootstrap Icon (bi-list) -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav-bar"
+        aria-controls="main-nav-bar" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list fs-2 text-white"></i>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="main-nav-bar">
+        <ul class="navbar-nav ms-auto fw-semibold">
+          <li class="nav-item"><a class="nav-link text-white" href="../../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="./services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="./about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="./contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="text-center text-white d-flex align-items-center justify-content-center" 
+    style="background: linear-gradient(rgba(15,107,52,0.8), rgba(15,107,52,0.8)), url('https://images.unsplash.com/photo-1559526324-593bc073d938?auto=format&fit=crop&w=1800&q=60') center/cover no-repeat; min-height: 220px;">
+    <h1 class="fw-bold display-5 p-3 bg-dark bg-opacity-25 rounded">Marketing Services</h1>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main class="container bg-white shadow rounded mt-4 mb-4 p-4 position-relative z-1">
+    <div class="row g-4">
+      <!-- LEFT COLUMN -->
+      <div class="col-lg-8">
+        <h2 class="fw-bold text-success  pb-3">Market With Us</h2>
+
+        <!-- image on investment -->
+        <img src="../../assets/img/picture/award.png" style="width: 300px;">
+
+        <h4 class="fw-bold text-success pt-2">Marketing Services</h4>
+        <!-- <p class="text-secondary">At our core, we are dedicated to investing in exceptional talent and high-growth startups. We provide financial capital to foster their growth under mutually agreeable terms.</p> -->
+
+        <p>Our marketing services are designed to amplify visibility and access to broader markets through our TV shows. We promote, sell, and advertise various products and businesses within context of our programming. Our range of options includes:
+
+ <span class="points">• one-time promotions</span>
+ <span class="points">• subscription-based packages</span>
+<span class="points">• contractual partnerships</span>
+
+This is to ensure that businesses at all levels can find an advertising solution that fits both their budget, and their specific needs.</p>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <aside class="col-lg-4"> 
+  <div class="card border-success border-start border-1">
+    <div class="card-body">
+      <h5 class="fw-bold text-success">Talk To Us</h5>
+      <p class="small text-muted">Kindly note that our Business Days are as follows</p>
+
+      <p class="mb-2"><strong>Monday : Friday</strong></p>
+
+      <p class="mb-1 d-flex align-items-center">
+        <i class="bi bi-telephone-fill me-2 "style="color:#0C6B37 !important" ></i>
+        (+265) 887 249 301 / (+265) 884 013 768
+      </p>
+
+      <p class="mb-1 d-flex align-items-center">
+        <i class="bi bi-envelope-fill me-2" style="color:#0C6B37 !important"></i>
+        pangolins.mw@gmail.com
+      </p>
+
+      <p class="mb-3 d-flex align-items-center">
+        <i class="bi bi-geo-alt-fill me-2 " style="color:#0C6B37 !important"></i>
+        Chilomoni, Nthukwa.
+      </p>
+
+      <a href="#" class="btn btn-success w-100 fw-bold">Contact Us</a>
+    </div>
+  </div>
+</aside>
+
+    </div>
+  </main>
+
+
+
+
+
+<!-- FOOTER -->
+  <div class="text-white screens footer-screen">
+                <div class="overlays overlay-footer"></div>
+                <footer class="container py-5">
+                    <div class="row">
+                        <div class="col-6 px-3 col-md-3 mb-3">
+                            <h5>Links</h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2">
+                                    <a href="../../index.html" class="nav-link p-0">Home</a>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <a href="./services.html" class="nav-link p-0">Services</a>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <a href="./about.html" class="nav-link p-0">About Us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./contact.html" class="nav-link p-0">Contacts</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 px-3 col-md-3 mb-3">
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2">
+                                    <a href="#" class="nav-link p-0">To top</a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+
+                        <div
+                            class="col-md-5 p-2 offset-md-1 mb-3 rounded d-flex align-items-center justify-content-center bg-footer-scales">
+                            <img loading="lazy" src="../../assets/img/icon/text-white.png" height="70%"
+                                alt="The Pangolins Logo">
+                        </div>
+                        
+                    </div>
+
+                    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top gap-3">
+                        <p><b>Your Capital Solution</b> <br> &copy; 2022 The Pangolins. All rights reserved.</p>
+                        <div class="d-flex flex-column gap-1 align-items-center">
+                            <p>Get in touch</p>
+                            <ul class="list-unstyled d-flex footer-socials justify-content-center">
+                                <li>
+                                    <a href="https://web.facebook.com/thepangolinsmw" title="Facebook Link">
+                                        <i class="bi bi-facebook"></i>
+                                    </a>
+                                </li>
+                                <li class="ms-3">
+                                    <a href="https://www.linkedin.com/company/the-pangolins/" title="Linkedin Profile">
+                                        <i class="bi bi-linkedin"></i>
+                                    </a>
+                                </li>
+                                <li class="ms-3">
+                                    <a href="https://twitter.com/thepangolinsmw" title="Twitter Link">
+                                        <i class="bi bi-twitter"></i>
+                                    </a>
+                                </li>
+                                <li class="ms-3">
+                                    <a href="https://tiktok.com/@thepangolinsmw" title="TikTok Link">
+                                        <i class="bi bi-tiktok"></i>
+                                    </a>
+                                </li>
+                                <li class="ms-3">
+                                    <a href="https://www.instagram.com/thepangolinsmw/" title="Instagram Link">
+                                        <i class="bi bi-instagram"></i>
+                                    </a>
+                                </li>
+                                <li class="ms-3">
+                                    <a href="https://wa.me/+265887249301" title="WhatsApp Contact">
+                                        <i class="bi bi-whatsapp"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+               
+            </div>
+  
+  
+  
+   
+
+  <!-- Bootstrap JS -->
+   
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

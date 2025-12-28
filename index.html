@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Navbar vertical mobile demo</title>
+
+    <!-- Bootstrap CSS (CDN) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons (for the hamburger icon) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --pango-green: #0c6b37; /* your site green */
+      }
+
+      body {
+        padding-top: 2px; /* space for fixed-top navbar */
+      }
+
+      /* Navbar styling */
+      .navbar {
+        height: 60px !important;
+        background-color: var(--pango-green);
+        z-index: 1030;
+      }
+      .navbar .navbar-brand img {
+        height: 30px;
+      }
+      .navbar .nav-link {
+        color: #fff;
+      }
+      .navbar .nav-link:hover {
+        background: rgba(255, 255, 255, 0.06);
+      }
+
+      /* Make the toggler icon visible on dark background (if using default icon) */
+      .navbar-toggler {
+        border: none;
+      }
+      .navbar-toggler-icon {
+        filter: invert(1);
+      }
+
+      /* IMPORTANT: Force vertical stacking for collapsed navbar-nav on small screens.
+       Bootstrap's .navbar-nav is a flex container; here we change its direction to column
+       when the collapse is used (<= lg breakpoint). */
+      @media (max-width: 991.98px) {
+        .navbar-collapse .navbar-nav {
+          flex-direction: column !important;
+          width: 100%;
+        }
+
+        /* Give the collapsed menu a matching background so items are readable */
+        .navbar-collapse {
+          background-color: var(--pango-green);
+          padding-bottom: 0.75rem;
+        }
+
+        /* Make links fill width and have comfortable vertical spacing */
+        .navbar-nav .nav-item {
+          text-align: center;
+        }
+        .navbar-nav .nav-link {
+          padding: 0.625rem 1rem;
+          width: 100%;
+        }
+      }
+
+      /* Desktop layout keeps horizontal menu */
+      @media (min-width: 992px) {
+        .navbar-collapse {
+          background: none !important;
+          padding: 0;
+        }
+        .navbar-nav .nav-link {
+          padding: 0.5rem 1rem;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="./dist/css/pango.css" />
+    <link rel="stylesheet" href="./dist/css/styles.css" />
+    <link rel="stylesheet" href="./dist/css/lightbox.css" />
+    <link rel="stylesheet" href="./dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="./dist/css/responsive.css" />
+    <link rel="stylesheet" href="./dist/css/uicons-brands.css" />
+    <link rel="stylesheet" href="./dist/css/bootstrap-icons.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/img/favicon/favicon.png"
+      type="image/x-icon"
+    />
+  </head>
+
+  <body onload="loadScrollReveal(), getNews()">
+    <!-- NAVBAR-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="../../index.html">
+          <img
+            loading="lazy"
+            src="./assets/img/icon/logo-all-white.png"
+            alt="The Pangolins Icon"
+          />
+        </a>
+
+        <!-- Using a simple button with a Bootstrap Icon (bi-list) -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#main-nav-bar"
+          aria-controls="main-nav-bar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="bi bi-list fs-2 text-white"></i>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="main-nav-bar"
+        >
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./dist/html/services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./dist/html/about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./dist/html/contact.html">Contacts</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--  page content -->
+    <div class="container-fluid p-0">
+      <!-- 🖼️ Full-Width Slideshow -->
+      <div
+        id="pangolinCarousel"
+        class="carousel slide carousel-fade"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div
+              class="position-relative d-flex align-items-center bg-dark hero-container"
+            >
+              <img
+                src="./assets/img/slid/podcastsession.jpg"
+                class="position-absolute top-0 start-0 w-100 h-100"
+                alt="Empowering Entrepreneurs"
+                style="object-fit: cover; opacity: 0.5"
+              />
+              <div class="container position-relative" style="z-index: 5">
+                <div class="row justify-content-center">
+                  <div class="col-12 col-lg-8 text-center text-white px-3">
+                    <h1 class="fw-bold mb-2 fs-4 fs-md-2 fs-lg-1 display-4">
+                      Empowering Entrepreneurs,<br />
+                      Transforming Economies
+                    </h1>
+
+                    <p class="mb-3 d-none d-md-block fs-5">
+                      We provide business development systems that enable
+                      entrepreneurs to start, grow, and scale sustainable
+                      ventures across Malawi MSME landscape and beyond.
+                    </p>
+
+                    <div class="d-flex justify-content-center gap-2 mt-2">
+                      <a
+                        href="#"
+                        class="btn btn-primary btn-sm btn-md-lg px-3 fw-bold"
+                      >
+                        Explore
+                      </a>
+                      <a
+                        href="#"
+                        class="btn btn-outline-light btn-sm btn-md-lg px-3 fw-bold"
+                      >
+                        Partner with us
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#pangolinCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#pangolinCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+      <!-- END 🖼️ Full-Width Slideshow -->
+
+      <!-- CEO FOREWORD -->
+      <section class="ceo-section py-5">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-5 mb-5 mb-lg-0 text-center">
+              <div class="ceo-image-container">
+                <img
+                  src="assets/img/images/jpg/Lonjezo Sibweza.jpg"
+                  alt="Mr. Lonjezo Sibweza"
+                  class="ceo-profile-img shadow-sm"
+                />
+              </div>
+            </div>
+
+            <div class="col-lg-7">
+              <div class="ps-lg-5">
+                <h6
+                  class="text-uppercase fw-bold mb-2"
+                  style="color: #d4af37; letter-spacing: 2px"
+                >
+                  Leadership Message
+                </h6>
+                <h2 class="display-5 fw-bold mb-4">
+                  From Our Chief Executive Officer
+                </h2>
+
+                <div class="ceo-accent-border">
+                  <p class="lead text-muted mb-4">
+                    "At The Pangolins, we believe entrepreneurship is the engine
+                    of national transformation. Our work is built on a
+                    systems-thinking approach, connecting people, capital,
+                    markets and ideas to build scalable ventures that move
+                    Malawi toward sustainable prosperity."
+                  </p>
+                  <p class="text-secondary">
+                    We are designing the infrastructure for an entrepreneurial
+                    nation. Through partnerships, capacity building, business
+                    development, investment facilitation, and innovation-driven
+                    services, we turn ambition into enterprise and enterprise
+                    into impact. Through these, we strengthen Malawi’s
+                    entrepreneurship ecosystem.
+                  </p>
+                  <p class="text-secondary">
+                    Together, we are shaping the next chapter of Malawi’s
+                    business landscape — one entrepreneur at a time.
+                  </p>
+                </div>
+
+                <div class="mt-4">
+                  <h5 class="ceo-signature mb-0">Lonjezo Sibweza</h5>
+                  <p class="text-uppercase small fw-bold text-muted">
+                    Chief Executive Officer, The Pangolins
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- About Pangolins section -->
+      <div container-fluid class="bg-pango-dark text-light py-5 mb-0">
+        <div class="container px-3 py-1 text-start">
+          <div class="col-lg-8 text-center mx-auto mb-4">
+            <h2 class="fw-bold text-body-emphasis text-center text">
+              About The Pangolins
+            </h2>
+            <p class="lead mt-3 text-black">
+              The Pangolins is a youth-led enterprise architecture company
+              driving entrepreneurship and innovation across Malawi. We design
+              entrepreneurial ecosystems, partnerships, markets and financial
+              pathways that help startups and MSMEs move from idea to investment
+              readiness. Founded in 2022, our mission is to unlock Malawi’s
+              entrepreneurial potential through business development services,
+              investment facilitation, entrepreneurial ecosystem weaving,
+              digital tools, and media influence.
+            </p>
+            <div class="py-3">
+              <a
+                href="/Pangolinsweb-main/dist/html/about.html"
+                class="btn btn-primary btn-sm btn-md-lg px-3 fw-bold"
+              >
+                Read more about us
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COR services -->
+      <section class="services-section mt-0">
+        <div class="container">
+          <div class="text-center mb-5">
+            <h6
+              class="text-uppercase fw-bold"
+              style="color: #d4af37; letter-spacing: 2px"
+            >
+              What We Do
+            </h6>
+            <h2 class="display-6 fw-bold">Our Core Services</h2>
+            <p class="text-muted mx-auto" style="max-width: 600px">
+              We provide the systems and architecture needed to scale ventures
+              across the Malawi MSME landscape.
+            </p>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+              <div class="card service-card p-4 shadow-sm">
+                <div class="icon-box">
+                  <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <h5 class="fw-bold">Business Development & Consulting</h5>
+                <p class="text-muted small">
+                  Strategy, documentation, and incubation support for startups
+                  and SMEs.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+              <div class="card service-card p-4 shadow-sm">
+                <div class="icon-box">
+                  <i class="fa-solid fa-clapperboard"></i>
+                </div>
+                <h5 class="fw-bold">Entrepreneurial Media & Storytelling</h5>
+                <p class="text-muted small">
+                  Through Pangolins TV, we amplify stories and connect
+                  entrepreneurs to opportunities.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+              <div class="card service-card p-4 shadow-sm">
+                <div class="icon-box">
+                  <i class="fa-solid fa-microchip"></i>
+                </div>
+                <h5 class="fw-bold">Technology & Systems Strengthening</h5>
+                <p class="text-muted small">
+                  Digital systems, CRM tools, and tech-enabled business support
+                  solutions.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+              <div class="card service-card p-4 shadow-sm">
+                <div class="icon-box">
+                  <i class="fa-solid fa-hand-holding-dollar"></i>
+                </div>
+                <h5 class="fw-bold">Finance & Investment Facilitation</h5>
+                <p class="text-muted small">
+                  Linking entrepreneurs to investors and managing rent-to-own
+                  programs.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-5">
+            <a href="services.html" class="btn btn-view-services shadow"
+              >View All Services</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <div class="px-2 py-2 bg-light">
+        <div class="container text-start p-0">
+          <div class="py-5 reasons">
+            <div class="feature rounded bg-white border p-4" data-scroll-reveal>
+              <div
+                class="feature-icon rounded bg-dark d-inline-flex text-light align-items-center justify-content-center fs-1"
+              >
+                <i class="bi-heart-fill"></i>
+              </div>
+              <h3 class="fs-2">Supporting Innovation</h3>
+              <p>
+                We understand that innovation and creativity are the
+                cornerstones of progress. Hence, we actively identify, promote,
+                and finance innovative and creative ideas and businesses. By
+                offering the necessary support and resources, we aim to
+                transform these budding ideas into successful ventures,
+                contributing to the growth of our economy and the overall
+                wellbeing of our citizens.
+              </p>
+            </div>
+            <div class="feature rounded bg-white border p-4" data-scroll-reveal>
+              <div
+                class="feature-icon rounded bg-dark d-inline-flex text-light align-items-center justify-content-center fs-1"
+              >
+                <i class="bi-fire"></i>
+              </div>
+              <h3 class="fs-2">Fighting Unemployment</h3>
+              <p>
+                One of the most pressing challenges in Malawi is unemployment.
+                The Pangolins takes this challenge head-on, setting an ambitious
+                target to reduce the unemployment rate by 2% annually. We strive
+                to achieve this by empowering entrepreneurs and helping them
+                create sustainable job opportunities for fellow citizens.
+              </p>
+            </div>
+            <div class="feature rounded bg-white border p-4" data-scroll-reveal>
+              <div
+                class="feature-icon rounded bg-dark d-inline-flex text-light align-items-center justify-content-center fs-1"
+              >
+                <i class="bi-link"></i>
+              </div>
+              <h3 class="fs-2">Collaborating with Investors</h3>
+              <p>
+                If you share our passion for empowering local talents,
+                supporting innovative ideas, and contributing to the development
+                of Malawi, we invite you to join us in this transformative
+                journey. Together, we can build a brighter and more prosperous
+                future for our nation.
+              </p>
+            </div>
+            <div
+              class="feature last-feature rounded border p-4 bg-pango-subtle text-dark"
+              data-scroll-reveal
+            >
+              <div
+                class="feature-icon rounded d-inline-flex bg-light align-items-center justify-content-center fs-1"
+              >
+                <i class="bi-people-fill"></i>
+              </div>
+              <h3 class="fs-2">Join Us in Our Journey</h3>
+              <p>
+                If you share our passion for empowering local talents,
+                supporting innovative ideas, and contributing to the development
+                of Malawi, we invite you to join us in this transformative
+                journey. Together, we can build a brighter and more prosperous
+                future for our nation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid bg-light">
+        <div class="container p-0">
+          <h1
+            class="display-3 fw-bold text-body-emphasis text-center text-fair col-lg-8 text-center mx-auto"
+          >
+            News
+          </h1>
+          <div class="news-container my-5"></div>
+        </div>
+      </div>
+      <div class="container-fluid bg-light" id="gallery">
+        <div class="container p-0">
+          <h1
+            class="display-3 fw-bold text-body-emphasis text-center text-fair col-lg-8 text-center mx-auto"
+          >
+            Gallery
+          </h1>
+          <div class="gallery-container my-5">
+            <div class="gallery-item" data-scroll-reveal>
+              <a
+                title="Gallery Image"
+                href="./assets/img/picture/image1.jpg"
+                data-lightbox="image1"
+                data-title="United as One, Stronger Together! 🤝 
+                            Together, we pave the way towards a brighter future for our Country and beyond.
+                                #TeamPangolins"
+              >
+                <img
+                  loading="lazy"
+                  src="./assets/img/picture/image1.jpg"
+                  alt="Image 1"
+                />
+              </a>
+            </div>
+            <div class="gallery-item" data-scroll-reveal>
+              <a
+                title="Gallery Image"
+                href="./assets/img/picture/magazine1.jpg"
+                data-lightbox="Magazine"
+                data-title="Business in Detail Magazine at Amaryllis Hotel, Blantyre. 📍"
+              >
+                <img
+                  loading="lazy"
+                  src="./assets/img/picture/magazine1.jpg"
+                  alt="Image 2"
+                />
+              </a>
+              <a
+                title="Gallery Image"
+                href="./assets/img/picture/magazine2.jpg"
+                data-lightbox="Magazine"
+                data-title="Making an Appearance at Business in Detail Magazine Event"
+              >
+              </a>
+              <a
+                title="Gallery Image"
+                href="./assets/img/picture/magazine3.jpg"
+                data-lightbox="Magazine"
+                data-title="Business in Detail Magazine Event"
+              >
+              </a>
+              <a
+                title="Gallery Image"
+                href="./assets/img/picture/magazine4.jpg"
+                data-lightbox="Magazine"
+                data-title="Business in Detail Magazine Event"
+              >
+              </a>
+              <a
+                title="Gallery Image"
+                href="./assets/img/picture/magazine5.jpg"
+                data-lightbox="Magazine"
+                data-title="Business in Detail Magazine Event"
+              >
+              </a>
+            </div>
+            <div class="gallery-item-double" data-scroll-reveal>
+              <div class="gallery-item">
+                <a
+                  title="Gallery Image"
+                  href="./assets/img/picture/meeting1.jpg"
+                  data-lightbox="meeting"
+                  data-title="Our First Meeting at Amaryllis Hotel, Blantyre. After our Kuphusha
+                                    Ngini victory. 📈"
+                >
+                  <img
+                    loading="lazy"
+                    src="./assets/img/picture/meeting1.jpg"
+                    alt="Image 2"
+                  />
+                </a>
+                <a
+                  title="Gallery Image"
+                  href="./assets/img/picture/meeting2.jpg"
+                  data-lightbox="meeting"
+                  data-title="Our First Meeting after our Kuphusha Ngini victory."
+                >
+                </a>
+                <a
+                  title="Gallery Image"
+                  href="./assets/img/picture/meeting3.jpg"
+                  data-lightbox="meeting"
+                  data-title="Our First Meeting after our Kuphusha Ngini victory."
+                >
+                </a>
+              </div>
+              <div class="gallery-item" data-scroll-reveal>
+                <a
+                  title="Gallery Image"
+                  href="./assets/img/picture/ngini1.jpg"
+                  data-lightbox="KuphushaNgini"
+                  data-title="Winning 1st Place at the Kuphusha Ngini Business Conference in 2022 🏆"
+                >
+                  <img
+                    loading="lazy"
+                    src="./assets/img/picture/ngini1.jpg"
+                    alt="Image 5"
+                  />
+                </a>
+                <a
+                  title="Gallery Image"
+                  href="./assets/img/picture/ngini2.jpg"
+                  data-lightbox="KuphushaNgini"
+                  data-title="Kuphusha Ngini Conference 2022"
+                ></a>
+                <a
+                  title="Gallery Image"
+                  href="./assets/img/picture/ngini3.jpg"
+                  data-lightbox="KuphushaNgini"
+                  data-title="Kuphusha Ngini Conference 2022"
+                ></a>
+                <a
+                  title="Gallery Image"
+                  href="./assets/img/picture/ngini4.jpg"
+                  data-lightbox="KuphushaNgini"
+                  data-title="Kuphusha Ngini Conference 2022"
+                ></a>
+                <a
+                  title="Gallery Image"
+                  href="./assets/img/picture/ngini5.jpg"
+                  data-lightbox="KuphushaNgini"
+                  data-title="Kuphusha Ngini Conference 2022"
+                ></a>
+                <a
+                  title="Gallery Image"
+                  href="./assets/img/picture/ngini6.jpg"
+                  data-lightbox="KuphushaNgini"
+                  data-title="Kuphusha Ngini Conference 2022"
+                ></a>
+                <a
+                  title="Gallery Image"
+                  href="./assets/img/picture/ngini7.jpg"
+                  data-lightbox="KuphushaNgini"
+                  data-title="Kuphusha Ngini Conference 2022"
+                ></a>
+                <a
+                  title="Gallery Image"
+                  href="./assets/img/picture/ngini8.jpg"
+                  data-lightbox="KuphushaNgini"
+                  data-title="Kuphusha Ngini Conference 2022"
+                ></a>
+                <a
+                  title="Gallery Image"
+                  href="./assets/img/picture/ngini9.jpg"
+                  data-lightbox="KuphushaNgini"
+                  data-title="Kuphusha Ngini Conference 2022"
+                ></a>
+                <a
+                  title="Gallery Image"
+                  href="./assets/img/picture/ngini10.jpg"
+                  data-lightbox="KuphushaNgini"
+                  data-title="Kuphusha Ngini Conference 2022"
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="screens dreams-screen">
+        <div class="overlays overlay-award"></div>
+        <div class="container px-2 py-4 text-start" id="join">
+          <div class="col-lg-8 text-center mx-auto">
+            <h1
+              class="display-3 fw-bold text-body-emphasis text-center text-fair"
+            >
+              Join Us in Shaping the Future
+            </h1>
+            <p class="lead mt-3">
+              Together, we can create a future filled with possibilities.
+              Whether you're an investor looking to make a difference or an
+              entrepreneur with an innovative idea, The Pangolins is your
+              platform for growth.
+            </p>
+          </div>
+          <div class="my-4 reasons text-light">
+            <div class="feature rounded bg-dark border p-4" data-scroll-reveal>
+              <div
+                class="feature-icon rounded bg-light d-inline-flex text-dark align-items-center justify-content-center fs-1"
+              >
+                <i class="bi-currency-dollar"></i>
+              </div>
+              <h3 class="fs-2">Invest with Impact</h3>
+              <p>
+                Become part of the transformative change by supporting local
+                entrepreneurs and their visionary projects.
+              </p>
+            </div>
+            <div class="feature rounded bg-dark border p-4" data-scroll-reveal>
+              <div
+                class="feature-icon rounded bg-light d-inline-flex text-dark align-items-center justify-content-center fs-1"
+              >
+                <i class="bi-graph-up-arrow"></i>
+              </div>
+              <h3 class="fs-2">Entrepreneurship Made Easy</h3>
+              <p>
+                Aspiring to turn your dreams into reality? Let us help you
+                navigate the path to success with our resources and expertise.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6 text-center mx-auto">
+            <small class="fw-medium">
+              Your support is vital to our mission's success.
+              <br />
+              Join The Pangolins community and let's build a brighter and more
+              prosperous future for Malawi together.
+            </small>
+          </div>
+        </div>
+      </div>
+
+      <div class="container px-2 py-5" id="faqs">
+        <div class="col-lg-8 text-center mx-auto mb-4">
+          <h1
+            class="display-3 fw-bold text-body-emphasis text-center text-fair"
+          >
+            FAQ
+          </h1>
+          <p class="lead mt-3">
+            Here are some of our Frequently Asked Questions. If you have any
+            other questions you’d like answered please feel free to email us.
+          </p>
+        </div>
+        <div class="container col-lg-8 p-0" data-scroll-reveal>
+          <div class="accordion" id="faq-accordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingSeven">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseSeven"
+                  aria-expanded="true"
+                  aria-controls="collapseSeven"
+                >
+                  What is The Pangolins?
+                </button>
+              </h2>
+              <div
+                id="collapseSeven"
+                class="accordion-collapse collapse show"
+                aria-labelledby="headingSeven"
+                data-bs-parent="#faq-accordion"
+              >
+                <div class="accordion-body">
+                  The Pangolins is an organization that aims at reducing
+                  unemployment rates in Malawi by promoting entrepreneurship and
+                  closing the gap thus prevalent between investors and young
+                  creators in Malawi.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingEight">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseEight"
+                  aria-expanded="false"
+                  aria-controls="collapseEight"
+                >
+                  Who's eligible for The Pangolins services?
+                </button>
+              </h2>
+              <div
+                id="collapseEight"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingEight"
+                data-bs-parent="#faq-accordion"
+              >
+                <div class="accordion-body">
+                  Anyone who has a business, established or emerging including
+                  those with defined ideas.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingNine">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseNine"
+                  aria-expanded="false"
+                  aria-controls="collapseNine"
+                >
+                  What are the interest rates of The Pangolins loans?
+                </button>
+              </h2>
+              <div
+                id="collapseNine"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingNine"
+                data-bs-parent="#faq-accordion"
+              >
+                <div class="accordion-body">
+                  Our interest rates are negotiable depending on number of
+                  factors such as collateral, period and whether or not the
+                  business is established.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTen">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTen"
+                  aria-expanded="false"
+                  aria-controls="collapseTen"
+                >
+                  What's the minimum and maximum amount one can get from The
+                  Pangolins?
+                </button>
+              </h2>
+              <div
+                id="collapseTen"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingTen"
+                data-bs-parent="#faq-accordion"
+              >
+                <div class="accordion-body">
+                  For unsecured, minimum is MWK50,000.00 and maximum is
+                  MWK1,000,000.00 while for secured, minimum is MWK50,000 and
+                  maximum is MWK10,000,000.00
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingEleven">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseEleven"
+                  aria-expanded="false"
+                  aria-controls="collapseEleven"
+                >
+                  What's the process if one wants to get The Pangolins services?
+                </button>
+              </h2>
+              <div
+                id="collapseEleven"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingEleven"
+                data-bs-parent="#faq-accordion"
+              >
+                <div class="accordion-body">
+                  The very first step is to contact The Pangolins for
+                  application form of a service you're looking for. Submit your
+                  completed form. Lastly, The Pangolins will call you for
+                  further review of your eligibility
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwelve">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwelve"
+                  aria-expanded="false"
+                  aria-controls="collapseTwelve"
+                >
+                  When is the first threshold of the application?
+                </button>
+              </h2>
+              <div
+                id="collapseTwelve"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingTwelve"
+                data-bs-parent="#faq-accordion"
+              >
+                <div class="accordion-body">
+                  The first threshold of application will open on the 1st August
+                  2023 and close on the 23rd August 2023
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-white screens footer-screen">
+        <div class="overlays overlay-footer"></div>
+        <footer class="container py-5">
+          <div class="row">
+            <div class="col-6 px-3 col-md-3 mb-3">
+              <h5>Links</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2">
+                  <a href="./index.html" class="nav-link p-0">Home</a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="./dist/html/services.html" class="nav-link p-0"
+                    >Services</a
+                  >
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="./dist/html/about.html" class="nav-link p-0"
+                    >About Us</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a href="./dist/html/contact.html" class="nav-link p-0"
+                    >Contacts</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-6 px-3 col-md-3 mb-3">
+              <h5>Sections</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0">To top</a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#gallery" class="nav-link p-0">Gallery</a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#join" class="nav-link p-0">Join us</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#faqs" class="nav-link p-0">FAQ</a>
+                </li>
+              </ul>
+            </div>
+
+            <div
+              class="col-md-5 p-2 offset-md-1 mb-3 rounded d-flex align-items-center justify-content-center bg-footer-scales"
+            >
+              <img
+                loading="lazy"
+                src="./assets/img/icon/text-white.png"
+                height="70%"
+                alt="The Pangolins Logo"
+              />
+            </div>
+          </div>
+
+          <div
+            class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top gap-3"
+          >
+            <p>
+              <b>Your Capital Solution</b> <br />
+              &copy; 2022 The Pangolins. All rights reserved.
+            </p>
+            <div class="d-flex flex-column gap-1 align-items-center">
+              <p>Get in touch</p>
+              <ul
+                class="list-unstyled d-flex footer-socials justify-content-center"
+              >
+                <li>
+                  <a
+                    href="https://web.facebook.com/thepangolinsmw"
+                    title="Facebook Link"
+                  >
+                    <i class="bi bi-facebook"></i>
+                  </a>
+                </li>
+                <li class="ms-3">
+                  <a
+                    href="https://www.linkedin.com/company/the-pangolins/"
+                    title="Linkedin Profile"
+                  >
+                    <i class="bi bi-linkedin"></i>
+                  </a>
+                </li>
+                <li class="ms-3">
+                  <a
+                    href="https://twitter.com/thepangolinsmw"
+                    title="Twitter Link"
+                  >
+                    <i class="bi bi-twitter"></i>
+                  </a>
+                </li>
+                <li class="ms-3">
+                  <a
+                    href="https://tiktok.com/@thepangolinsmw"
+                    title="TikTok Link"
+                  >
+                    <i class="bi bi-tiktok"></i>
+                  </a>
+                </li>
+                <li class="ms-3">
+                  <a
+                    href="https://www.instagram.com/thepangolinsmw/"
+                    title="Instagram Link"
+                  >
+                    <i class="bi bi-instagram"></i>
+                  </a>
+                </li>
+                <li class="ms-3">
+                  <a
+                    href="https://wa.me/+265887249301"
+                    title="WhatsApp Contact"
+                  >
+                    <i class="bi bi-whatsapp"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle (includes Popper) - only include once and before your custom script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // Auto-close the mobile menu when any nav-link is clicked (only when collapse is shown)
+      document.addEventListener("DOMContentLoaded", function () {
+        const navbarCollapse = document.getElementById("main-nav-bar");
+        const navLinks = navbarCollapse.querySelectorAll(".nav-link");
+
+        navLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            // if the collapse is currently shown, hide it
+            if (navbarCollapse.classList.contains("show")) {
+              const bsCollapse =
+                bootstrap.Collapse.getInstance(navbarCollapse) ||
+                new bootstrap.Collapse(navbarCollapse, { toggle: false });
+              bsCollapse.hide();
+            }
+          });
+        });
+      });
+    </script>
+    <script src="./dist/js/index.js"></script>
+    <script src="./dist/js/script.js"></script>
+    <script src="./dist/js/papaparse.js"></script>
+    <script src="./dist/js/scrollReveal.js"></script>
+    <script src="./dist/js/lightbox-plus-jquery.js"></script>
+  </body>
+</html>

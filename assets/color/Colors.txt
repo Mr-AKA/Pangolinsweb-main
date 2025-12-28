@@ -1,0 +1,17 @@
+#Colors
+--accent-color: var(--bs-primary);
+--background-color: #F8F9FD;
+
+
+##Other Colors
+--border-color: rgba(130, 130, 130, 0.1);
+--background-hover: rgba(130, 130, 130, 0.2);
+--platinum: #e3e3e3ff;
+--text-hover: rgb(255, 255, 255);
+--night: #181517ff;
+
+##Extra Variables
+:root {
+    --transition: all 0.2s ease-in-out;
+    --border: 1px solid red;
+}

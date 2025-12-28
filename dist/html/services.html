@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+    <head>
+        <title>Our Services | The Pangolins</title>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="../../dist/css/pango.css">
+        <link rel="stylesheet" href="../../dist/css/styles.css">
+        <link rel="stylesheet" href="../../dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../../dist/css/responsive.css">
+        <link rel="stylesheet" href="../../dist/css/uicons-brands.css">
+        <link rel="stylesheet" href="../../dist/css/bootstrap-icons.css">
+        <link rel="shortcut icon" href="../../assets/img/favicon/favicon.png" type="image/x-icon">
+    </head>
+
+    <style>
+        .btn{
+            background-color: var(--pango-green) !important;
+        }
+        .text-center a{
+            text-decoration: none !important;
+        }
+        :root {
+      --pango-green: #0C6B37; /* your site green */
+    }
+.body{
+    padding-top: 700px;
+}
+
+   /* Import Font */
+
+        @font-face {
+            font-family: Gilmer;
+            src: url(../../fonts/Gilmer\ Regular.ttf) format("ttf");
+        }
+
+        /* Set Custom Font */
+
+        .gilmer {
+            font-family: Gilmer !important;
+        }
+          /* Navbar styling */
+    .navbar {
+         height: 60px !important;
+      background-color: var(--pango-green);
+      z-index: 1030;
+      
+    }
+    .navbar .navbar-brand img { height: 30px; }
+    .navbar .nav-link { color: #fff; }
+    .navbar .nav-link:hover { background: rgba(255,255,255,0.06); }
+
+    /* Make the toggler icon visible on dark background (if using default icon) */
+    .navbar-toggler { border: none; }
+    .navbar-toggler-icon { filter: invert(1); }
+
+    /* IMPORTANT: Force vertical stacking for collapsed navbar-nav on small screens.
+       Bootstrap's .navbar-nav is a flex container; here we change its direction to column
+       when the collapse is used (<= lg breakpoint). */
+    @media (max-width: 991.98px) {
+      .navbar-collapse .navbar-nav {
+        flex-direction: column !important;
+        width: 100%;
+      }
+
+      /* Give the collapsed menu a matching background so items are readable */
+      .navbar-collapse {
+        background-color: var(--pango-green);
+        padding-bottom: 0.75rem;
+        
+      }
+      
+
+      /* Make links fill width and have comfortable vertical spacing */
+      .navbar-nav .nav-item { text-align: center; }
+      .navbar-nav .nav-link {
+        padding: 0.625rem 1rem;
+        width: 100%;
+      }
+    }
+
+    /* Desktop layout keeps horizontal menu */
+    @media (min-width: 992px) {
+      .navbar-collapse { background: none !important; padding: 0; }
+      .navbar-nav .nav-link { padding: .5rem 1rem;}
+    }
+    </style>
+
+    <body onload="loadScrollReveal()">
+<!-- NAVBAR-->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" >
+    <div class="container">
+      <a class="navbar-brand" href="../../index.html">
+       <img loading="lazy" src="../../assets/img/icon/logo-all-white.png" alt="The Pangolins Icon"
+                                width="120">
+      </a>
+
+      <!-- Using a simple button with a Bootstrap Icon (bi-list) -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav-bar"
+        aria-controls="main-nav-bar" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list fs-2 text-white"></i>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="main-nav-bar">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="../../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="./services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="./about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="./contact.html">Contacts</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+        <div class="container-fluid p-0 conn" >
+            <div class="container-fluid text-light screens services-screen p-0">
+                <div class="overlays overlay-main"></div>
+                 
+   
+  
+
+                <div class="container py-5 mt-4">
+                    <span class="pb-3 mb-5 align-items-center justify-content-center">
+                        <h1 class="fw-bold display-1" data-scroll-reveal>Our Services</h1>
+                    </span>
+                </div>
+            </div>
+            <div class="container py-5 px-2" id="services">
+                <div class="services-container">
+                    <div class="rounded border bg-white text-center shadow service-item" data-scroll-reveal>
+                       
+                            <img loading="lazy" src="../../assets/img/images/svg/investment.svg" alt="Investment Icon"
+                            class="service-icon">
+                       
+                       
+                        <div>
+                            <h2>Investment</h2>
+                            <p>
+                                We offer funding and partner with potential start-ups across Malawi. We bridge the gap
+                                between potential businesses and investors.
+                            </p>
+                            <div class="text-center">
+                                <a href="investment.html">
+            <button class="btn btn-primary">Read More</button>
+            </a>
+        </div>
+                        </div>
+                    </div>
+                   <div id="rent-own" class="rounded border bg-white text-center shadow service-item" data-scroll-reveal>
+    
+        <img loading="lazy" src="../../assets/img/images/svg/Key-pana.svg" alt="Rent to Own Icon" class="service-icon">
+    
+    <div>
+        <h2>Rent to Own</h2>
+        <p>
+            We offer assets to talented and skilled young entrepreneurs on rent until they grow and buy their own.
+        </p>
+
+        <div class="text-center">
+                                <a href="Rent-To-Own.html">
+            <button class="btn btn-primary">Read More</button>
+            </a>
+        </div>
+    </div>
+</div>
+
+                    <div class="rounded border bg-white text-center shadow service-item" data-scroll-reveal>
+                        
+                        <img loading="lazy" src="../../assets/img/images/svg/secure-loans.svg" alt="Investment Icon"
+                            class="service-icon">
+                            
+                        <div>
+                            <h2>Loans</h2>
+                            <p>
+                                These loans are backed by collateral, giving borrowers
+                                the confidence to pursue their ventures.
+                            </p>
+                            <div class="text-center">
+                                <a href="Loans.html">
+            <button class="btn btn-primary">Read More</button>
+            </a>
+        </div>
+                        </div>
+                    </div>
+                    
+                    <div class="rounded border bg-white text-center shadow service-item" data-scroll-reveal>
+                        <img loading="lazy" src="../../assets/img/images/svg/business-training.svg"
+                            alt="Investment Icon" class="service-icon">
+                        <div>
+                            <h2>Business Training</h2>
+                            <p>
+                                Entrepreneurs are oriented on various
+                                aspects of entrepreneurship including pitching, business analysis, leadership
+                                and management.
+                            </p>
+                            <a href="BusinessTraining.html">
+            <button class="btn btn-primary">Read More</button>
+            </a>
+                        </div>
+                    </div>
+                    <div class="rounded border bg-white text-center shadow service-item" data-scroll-reveal>
+                        <img loading="lazy" src="../../assets/img/images/svg/marketing-advertising.svg"
+                            alt="Investment Icon" class="service-icon">
+                        <div>
+                            <h2>Marketing and Advertisement</h2>
+                            <p>
+                                Through our networks, we help Promote and Market the products, services as well as skills of the
+                                entrepreneurs.
+                            </p>
+                             <a href="marketing.html">
+            <button class="btn btn-primary">Read More</button>
+            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-0 px-2 bg-light">
+                <div class="container p-0 text-start">
+                    <div class="col-lg-8 text-center mx-auto" id="why">
+                        <h1 class="display-3 fw-bold text-body-emphasis text-center text-fair">
+                            Why Choose Us?
+                        </h1>
+                        <p class="lead my-4">
+                            At The Pangolins, we are more than just a funding organization. We are passionate about
+                            empowering
+                            young entrepreneurs in Malawi and bridging the gap between investors and emerging
+                            businesses. Our
+                            commitment to transparency, personalized financial solutions, and experienced guidance sets
+                            us apart.
+                            With our secure loan options, business training, and ongoing support, we aim to be your
+                            reliable
+                            partner in your entrepreneurial journey. Choose The Pangolins and let's grow together.
+                        </p>
+                    </div>
+                    <div class="reasons">
+                        <div class="feature rounded bg-white border p-4" data-scroll-reveal>
+                            <div
+                                class="feature-icon rounded bg-dark d-inline-flex text-light align-items-center justify-content-center fs-1">
+                                <i class="bi-shield-check"></i>
+                            </div>
+                            <h3 class="fs-2">Secure and Transparent</h3>
+                            <p>
+                                The Pangolins prioritize security and transparency in all our
+                                services.
+                                Our loan options are designed to be secure for both borrowers and investors,
+                                ensuring a
+                                trustworthy partnership.
+                            </p>
+                        </div>
+                        <div class="feature rounded bg-white border p-4" data-scroll-reveal>
+                            <div
+                                class="feature-icon rounded bg-dark d-inline-flex text-light align-items-center justify-content-center fs-1">
+                                <i class="bi-people"></i>
+                            </div>
+                            <h3 class="fs-2">Experienced Team</h3>
+                            <p>
+                                Our team consists of experienced professionals who are
+                                dedicated to
+                                supporting and guiding entrepreneurs throughout their journey. We provide
+                                personalized
+                                assistance to ensure your success.
+                            </p>
+                        </div>
+                        <div class="feature rounded bg-white border p-4" data-scroll-reveal>
+                            <div
+                                class="feature-icon rounded bg-dark d-inline-flex text-light align-items-center justify-content-center fs-1">
+                                <i class="bi-check2-circle"></i>
+                            </div>
+                            <h3 class="fs-2">Tailored Solutions</h3>
+                            <p>
+                                We understand that each business is unique. That's why we offer
+                                tailored
+                                financial solutions that align with your specific needs and goals, providing the
+                                best
+                                support for your venture.
+                            </p>
+                        </div>
+                        <div class="feature bg-white rounded border p-4" data-scroll-reveal>
+                            <div
+                                class="feature-icon rounded d-inline-flex bg-dark text-light align-items-center justify-content-center fs-1">
+                                <i class="bi-hand-thumbs-up"></i>
+                            </div>
+                            <h3 class="fs-2">Empowering Entrepreneurs</h3>
+                            <p>
+                                At The Pangolins, we are committed to empowering entrepreneurs
+                                with the
+                                resources and knowledge they need to succeed. We provide business training and
+                                ongoing
+                                support to help you thrive in your journey.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container px-2 my-5" id="faqs">
+                <div class="col-lg-8 text-center mx-auto mb-4">
+                    <h1 class="display-3 fw-bold text-body-emphasis text-center text-fair">
+                        FAQ
+                    </h1>
+                </div>
+                <div class="container p-0 col-lg-8" data-scroll-reveal>
+                    <div class="accordion" id="services-accordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingInvestment">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseInvestment" aria-expanded="true"
+                                    aria-controls="collapseInvestment">
+                                    What is The Pangolins' Investment Program?
+                                </button>
+                            </h2>
+                            <div id="collapseInvestment" class="accordion-collapse collapse show"
+                                aria-labelledby="headingInvestment" data-bs-parent="#services-accordion">
+                                <div class="accordion-body">
+                                    The Pangolins' Investment Program aims to provide funding and partner with potential
+                                    start-ups
+                                    across Malawi. We bridge the gap between potential businesses and investors,
+                                    fostering
+                                    entrepreneurship and economic growth.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingSecuredLoans">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseSecuredLoans" aria-expanded="false"
+                                    aria-controls="collapseSecuredLoans">
+                                    What are The Pangolins' Secured Loans?
+                                </button>
+                            </h2>
+                            <div id="collapseSecuredLoans" class="accordion-collapse collapse"
+                                aria-labelledby="headingSecuredLoans" data-bs-parent="#services-accordion">
+                                <div class="accordion-body">
+                                    The Pangolins offers secured loans to innovative young entrepreneurs in Malawi at a
+                                    reasonable
+                                    rate. These loans require collateral, providing a more secure lending option for
+                                    businesses.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingUnsecuredLoans">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseUnsecuredLoans" aria-expanded="false"
+                                    aria-controls="collapseUnsecuredLoans">
+                                    What are The Pangolins' Unsecured Loans?
+                                </button>
+                            </h2>
+                            <div id="collapseUnsecuredLoans" class="accordion-collapse collapse"
+                                aria-labelledby="headingUnsecuredLoans" data-bs-parent="#services-accordion">
+                                <div class="accordion-body">
+                                    The Pangolins offers unsecured loans to talented and skilled young entrepreneurs in
+                                    Malawi. No
+                                    collateral is required, making it a suitable financing option for businesses with
+                                    innovative
+                                    ideas.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingRentToOwn">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseRentToOwn" aria-expanded="false"
+                                    aria-controls="collapseRentToOwn">
+                                    What is The Pangolins' Rent to Own Program?
+                                </button>
+                            </h2>
+                            <div id="collapseRentToOwn" class="accordion-collapse collapse"
+                                aria-labelledby="headingRentToOwn" data-bs-parent="#services-accordion">
+                                <div class="accordion-body">
+                                    The Pangolins' Rent to Own Program offers assets to talented and skilled young
+                                    entrepreneurs on
+                                    rent. This program enables entrepreneurs to access essential resources until they
+                                    grow and are
+                                    able to purchase the assets for their own use.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingBusinessTraining">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseBusinessTraining" aria-expanded="false"
+                                    aria-controls="collapseBusinessTraining">
+                                    What Business Training does The Pangolins offer?
+                                </button>
+                            </h2>
+                            <div id="collapseBusinessTraining" class="accordion-collapse collapse"
+                                aria-labelledby="headingBusinessTraining" data-bs-parent="#services-accordion">
+                                <div class="accordion-body">
+                                    The Pangolins provides comprehensive business training during the provision of our
+                                    services.
+                                    Entrepreneurs receive orientation on various aspects of entrepreneurship, including
+                                    pitching,
+                                    business analysis tools, as well as leadership and management of their
+                                    organizations.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingMarketingAdvertising">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseMarketingAdvertising" aria-expanded="false"
+                                    aria-controls="collapseMarketingAdvertising">
+                                    How does The Pangolins help with Marketing and Advertising?
+                                </button>
+                            </h2>
+                            <div id="collapseMarketingAdvertising" class="accordion-collapse collapse"
+                                aria-labelledby="headingMarketingAdvertising" data-bs-parent="#services-accordion">
+                                <div class="accordion-body">
+                                    Through our platform, The Pangolins promotes and sells the products and skills of
+                                    the
+                                    entrepreneurs. We help them reach a wider audience and boost their visibility in the
+                                    market,
+                                    enhancing their chances of success.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-white screens footer-screen">
+                <div class="overlays overlay-footer"></div>
+                <footer class="container py-5">
+                    <div class="row">
+                        <div class="col-6 px-3 col-md-3 mb-3">
+                            <h5>Links</h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2">
+                                    <a href="../../index.html" class="nav-link p-0">Home</a>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <a href="./services.html" class="nav-link p-0">Services</a>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <a href="./about.html" class="nav-link p-0">About Us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./contact.html" class="nav-link p-0">Contacts</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 px-3 col-md-3 mb-3">
+                            <h5>Sections</h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2">
+                                    <a href="#" class="nav-link p-0">To top</a>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <a href="#services" class="nav-link p-0">Services</a>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <a href="#why" class="nav-link p-0">Why us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#faqs" class="nav-link p-0">FAQ</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div
+                            class="col-md-5 p-2 offset-md-1 mb-3 rounded d-flex align-items-center justify-content-center bg-footer-scales">
+                            <img loading="lazy" src="../../assets/img/icon/text-white.png" height="70%"
+                                alt="The Pangolins Logo">
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top gap-3">
+                        <p><b>Your Capital Solution</b> <br> &copy; 2022 The Pangolins. All rights reserved.</p>
+                        <div class="d-flex flex-column gap-1 align-items-center">
+                            <p>Get in touch</p>
+                            <ul class="list-unstyled d-flex footer-socials justify-content-center">
+                                <li>
+                                    <a href="https://web.facebook.com/thepangolinsmw" title="Facebook Link">
+                                        <i class="bi bi-facebook"></i>
+                                    </a>
+                                </li>
+                                <li class="ms-3">
+                                    <a href="https://www.linkedin.com/company/the-pangolins/" title="Linkedin Profile">
+                                        <i class="bi bi-linkedin"></i>
+                                    </a>
+                                </li>
+                                <li class="ms-3">
+                                    <a href="https://twitter.com/thepangolinsmw" title="Twitter Link">
+                                        <i class="bi bi-twitter"></i>
+                                    </a>
+                                </li>
+                                <li class="ms-3">
+                                    <a href="https://tiktok.com/@thepangolinsmw" title="TikTok Link">
+                                        <i class="bi bi-tiktok"></i>
+                                    </a>
+                                </li>
+                                <li class="ms-3">
+                                    <a href="https://www.instagram.com/thepangolinsmw/" title="Instagram Link">
+                                        <i class="bi bi-instagram"></i>
+                                    </a>
+                                </li>
+                                <li class="ms-3">
+                                    <a href="https://wa.me/+265887249301" title="WhatsApp Contact">
+                                        <i class="bi bi-whatsapp"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+ <script>
+    // Auto-close the mobile menu when any nav-link is clicked (only when collapse is shown)
+    document.addEventListener('DOMContentLoaded', function () {
+      const navbarCollapse = document.getElementById('main-nav-bar');
+      const navLinks = navbarCollapse.querySelectorAll('.nav-link');
+
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          // if the collapse is currently shown, hide it
+          if (navbarCollapse.classList.contains('show')) {
+            const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse) || new bootstrap.Collapse(navbarCollapse, { toggle: false });
+            bsCollapse.hide();
+          }
+        });
+      });
+    });
+  </script>
+        <script src="../../dist/js/index.js"></script>
+        <!-- <script src="../../dist/js/script.js"></script> -->
+        <!-- <script src="../../dist/js/downloads.js"></script> -->
+        <!-- <script src="../../dist/js/scrollReveal.js"></script> -->
+        <script src="../../dist/js/bootstrap.bundle.js"></script>
+        
+    </body>
+
+</html>
+
+
+

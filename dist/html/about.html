@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+  <head>
+    <title>About Us | The Pangolins</title>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../../dist/css/pango.css" />
+    <link rel="stylesheet" href="../../dist/css/styles.css" />
+    <link rel="stylesheet" href="../../dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="../../dist/css/responsive.css" />
+    <link rel="stylesheet" href="../../dist/css/uicons-brands.css" />
+    <link rel="stylesheet" href="../../dist/css/bootstrap-icons.css" />
+    <link
+      rel="shortcut icon"
+      href="../../assets/img/favicon/favicon.png"
+      type="image/x-icon"
+    />
+  </head>
+
+  <style>
+    .partners-section {
+      padding: 60px 0;
+      background-color: #f9f9f9;
+    }
+    .partner-item {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      background-color: #fff;
+      transition: box-shadow 0.3s ease;
+    }
+    .partner-item:hover {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .partner-logo {
+      max-width: 100px;
+      height: auto;
+    }
+    .partner-name {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    :root {
+      --pango-green: #0c6b37; /* your site green */
+    }
+    .body {
+      padding-top: 700px;
+    }
+
+    /* Import Font */
+
+    @font-face {
+      font-family: Gilmer;
+      src: url(../../fonts/Gilmer\ Regular.ttf) format("ttf");
+    }
+
+    /* Set Custom Font */
+
+    .gilmer {
+      font-family: Gilmer !important;
+    }
+    /* Navbar styling */
+    .navbar {
+      height: 60px !important;
+      background-color: var(--pango-green);
+      z-index: 1030;
+    }
+    .navbar .navbar-brand img {
+      height: 30px;
+    }
+    .navbar .nav-link {
+      color: #fff;
+    }
+    .navbar .nav-link:hover {
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    /* Make the toggler icon visible on dark background (if using default icon) */
+    .navbar-toggler {
+      border: none;
+    }
+    .navbar-toggler-icon {
+      filter: invert(1);
+    }
+
+    /* IMPORTANT: Force vertical stacking for collapsed navbar-nav on small screens.
+       Bootstrap's .navbar-nav is a flex container; here we change its direction to column
+       when the collapse is used (<= lg breakpoint). */
+    @media (max-width: 991.98px) {
+      .navbar-collapse .navbar-nav {
+        flex-direction: column !important;
+        width: 100%;
+      }
+
+      /* Give the collapsed menu a matching background so items are readable */
+      .navbar-collapse {
+        background-color: var(--pango-green);
+        padding-bottom: 0.75rem;
+      }
+
+      /* Make links fill width and have comfortable vertical spacing */
+      .navbar-nav .nav-item {
+        text-align: center;
+      }
+      .navbar-nav .nav-link {
+        padding: 0.625rem 1rem;
+        width: 100%;
+      }
+    }
+
+    /* Desktop layout keeps horizontal menu */
+    @media (min-width: 992px) {
+      .navbar-collapse {
+        background: none !important;
+        padding: 0;
+      }
+      .navbar-nav .nav-link {
+        padding: 0.5rem 1rem;
+      }
+    }
+  </style>
+
+  <body onload="loadScrollReveal(), getTeam()">
+    <!-- NAVBAR-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="../../index.html">
+          <img
+            loading="lazy"
+            src="../../assets/img/icon/logo-all-white.png"
+            alt="The Pangolins Icon"
+            width="120"
+          />
+        </a>
+
+        <!-- Using a simple button with a Bootstrap Icon (bi-list) -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#main-nav-bar"
+          aria-controls="main-nav-bar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="bi bi-list fs-2 text-white"></i>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="main-nav-bar"
+        >
+          <ul class="navbar-nav ms-auto fw-semibold">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="../../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="./services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="./about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="./contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid p-0">
+      <div class="container-fluid text-light screens about-screen p-0">
+        <div class="overlays overlay-main"></div>
+
+        <div class="container py-5">
+          <span class="pb-1 mb-1 align-items-center justify-content-center">
+            <h1 class="fw-bold display-1 mt-5" data-scroll-reveal>About Us</h1>
+          </span>
+        </div>
+      </div>
+
+      <div class="container py-4">
+        <div class="p-5 mb-4 border bg-white rounded" id="history">
+          <div class="container-fluid" data-scroll-reveal>
+            <h1 class="display-5 fw-bold mb-4">Our History</h1>
+            <p class="fs-5">
+              The Pangolins was founded by a group of passionate and
+              forward-thinking youthful individuals who saw the untapped
+              potential in our local talent pool. Inspired by the pangolin's
+              resilience and adaptability, we set out on a mission to bridge the
+              gap between investors and emerging entrepreneurs in Malawi.
+            </p>
+          </div>
+        </div>
+
+        <div class="row align-items-md-stretch">
+          <div class="col-md-6 mb-3" data-scroll-reveal>
+            <div class="h-100 p-5 rounded border bg-white">
+              <h2 class="mb-3">Our Mission</h2>
+              <p class="fs-5">
+                At The Pangolins, our primary goal is to save, protect, and
+                nurture local talents and skills in our country. We firmly
+                believe that by empowering our youth and fostering creativity,
+                we can drive sustainable growth and prosperity for our economy
+                and society as a whole.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 mb-3" data-scroll-reveal>
+            <div class="h-100 p-5 rounded border bg-white">
+              <h2 class="mb-3">Our Vision</h2>
+              <p class="fs-5">
+                Our vision at The Pangolins is to see a thriving Malawian
+                economy where local talents and skills are cherished, developed,
+                and harnessed to their full potential. We envision a future
+                where creativity flourishes, unemployment diminishes, and
+                prosperity touches the lives of every citizen.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="container-fluid screens award-screen border border-light p-0"
+        id="award"
+      >
+        <div class="overlays overlay-award"></div>
+        <div class="my-5 text-center">
+          <h1 class="display-4 fw-bold text-body-emphasis">Kuphusha Ngini</h1>
+          <h3 class="fw-bold text-body-emphasis">
+            Entrepreneurship Conference 2022
+          </h3>
+          <div class="col-lg-6 mx-auto mt-3">
+            <p class="lead mb-4 px-4">
+              We proudly took the top spot among fifteen businesses at the
+              Kuphusha Ngini Entrepreneurship Conference in 2022. The award of
+              K1,000,000 strengthens our commitment to empowering local talents
+              in Malawi. Together, we're creating a brighter future for our
+              nation. Thank you for being part of our journey! 🏆
+            </p>
+          </div>
+          <div>
+            <div class="container" data-scroll-reveal>
+              <img
+                loading="lazy"
+                src="../../assets/img/picture/award.png"
+                class="img-fluid border rounded shadow-lg mb-4"
+                alt="Example image"
+                width="700"
+                height="500"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- TEAM SECTION-->
+      <div class="container-fluid bg-light" id="team">
+        <div class="container">
+          <div class="row text-center py-5">
+            <h3 class="fs-1 py-2 px-0 mb-5 fw-light fw-bold text-body-emphasis">
+              Our Team
+            </h3>
+            <span class="row team-container">
+              <div
+                class="team-member col-md-4 col-sm-6 mb-5"
+                data-scroll-reveal
+              >
+                <img
+                  src="../../assets/img/images/png/loading.gif"
+                  loading="lazy"
+                  class="p-5 rounded-circle mb-3"
+                  role="img"
+                  alt="Loading"
+                />
+              </div>
+              <div
+                class="team-member col-md-4 col-sm-6 mb-5"
+                data-scroll-reveal
+              >
+                <img
+                  src="../../assets/img/images/png/loading.gif"
+                  loading="lazy"
+                  class="p-5 rounded-circle mb-3"
+                  role="img"
+                  alt="Loading"
+                />
+              </div>
+              <div
+                class="team-member col-md-4 col-sm-6 mb-5"
+                data-scroll-reveal
+              >
+                <img
+                  src="../../assets/img/images/png/loading.gif"
+                  loading="lazy"
+                  class="p-5 rounded-circle mb-3"
+                  role="img"
+                  alt="Loading"
+                />
+              </div>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Partners & Collaborators -->
+      <section class="partners-section text-center">
+        <div class="container">
+          <h2 class="mb-5 fw-bold">Partners & Collaborators</h2>
+          <div class="row gy-4">
+            <!-- Partner 1 -->
+            <div class="col-md-6">
+              <div
+                class="d-flex align-items-center justify-content-between partner-item"
+                style="height: 120px"
+              >
+                <div class="partner-name text-start">
+                  Malawi University of Business and Applied Sciences (MUBAS)
+                </div>
+                <img
+                  src="../../assets/img/parteners/mubas.png"
+                  alt="Malawi University of Business and Applied Sciences (MUBAS) Logo"
+                  class="partner-logo"
+                />
+              </div>
+            </div>
+
+            <!-- Partner 2 -->
+            <div class="col-md-6">
+              <div
+                class="d-flex align-items-center justify-content-between partner-item"
+                style="height: 120px"
+              >
+                <div class="partner-name text-start">EU Zantchito</div>
+                <img
+                  src="../../assets/img/parteners/zantchito.png"
+                  alt="EU Zantchito Logo"
+                  class="partner-logo"
+                />
+              </div>
+            </div>
+
+            <!-- Partner 3 -->
+            <div class="col-md-6">
+              <div
+                class="d-flex align-items-center justify-content-between partner-item"
+                style="height: 120px"
+              >
+                <div class="partner-name text-start">
+                  Technical and Vocational and Entrepreneurial Training
+                  Authority (TEVETA)
+                </div>
+                <img
+                  src="../../assets/img/parteners/teveta.png"
+                  alt="Technical and Vocational and Entrepreneurial Training Authority (TEVETA) Logo"
+                  class="partner-logo"
+                />
+              </div>
+            </div>
+
+            <!-- Partner 4 -->
+            <div class="col-md-6">
+              <div
+                class="d-flex align-items-center justify-content-between partner-item"
+                style="height: 120px"
+              >
+                <div class="partner-name text-start">PPDA</div>
+                <img
+                  src="../../assets/img/parteners/ppda.png"
+                  alt="PPDA Logo"
+                  class="partner-logo"
+                />
+              </div>
+            </div>
+
+            <!-- Partner 5 -->
+            <div class="col-md-6">
+              <div
+                class="d-flex align-items-center justify-content-between partner-item"
+                style="height: 120px"
+              >
+                <div class="partner-name text-start">Amaryllis</div>
+                <img
+                  src="../../assets/img/parteners/amaryllis.png"
+                  alt="Amaryllis Logo"
+                  class="partner-logo"
+                />
+              </div>
+            </div>
+
+            <!-- Partner 6 -->
+            <div class="col-md-6">
+              <div
+                class="d-flex align-items-center justify-content-between partner-item"
+                style="height: 120px"
+              >
+                <div class="partner-name text-start">MBC</div>
+                <img
+                  src="../../assets/img/parteners/mbc.png"
+                  alt="MBC Logo"
+                  class="partner-logo"
+                />
+              </div>
+            </div>
+
+            <!-- Partner 7 -->
+            <div class="col-md-6">
+              <div
+                class="d-flex align-items-center justify-content-between partner-item"
+                style="height: 120px"
+              >
+                <div class="partner-name text-start">FINCOOP</div>
+                <img
+                  src="../../assets/img/parteners/fincoop.png"
+                  alt="FINCOOP Logo"
+                  class="partner-logo"
+                />
+              </div>
+            </div>
+
+            <!-- Partner 8 -->
+            <div class="col-md-6">
+              <div
+                class="d-flex align-items-center justify-content-between partner-item"
+                style="height: 120px"
+              >
+                <div class="partner-name text-start">Luta Investments inc</div>
+                <img
+                  src="../../assets/img/parteners/luta.png"
+                  alt="Luta Investments inc Logo"
+                  class="partner-logo"
+                />
+              </div>
+            </div>
+
+            <!-- Partner 9 -->
+            <div class="col-md-6">
+              <div
+                class="d-flex align-items-center justify-content-between partner-item"
+                style="height: 120px"
+              >
+                <div class="partner-name text-start">SJF</div>
+                <img
+                  src="../../assets/img/parteners/sjf.png"
+                  alt="SJF Logo"
+                  class="partner-logo"
+                />
+              </div>
+            </div>
+            <!-- Partner 10 -->
+            <div class="col-md-6">
+              <div
+                class="d-flex align-items-center justify-content-between partner-item"
+                style="height: 120px"
+              >
+                <div class="partner-name text-start">LexoraWorks</div>
+                <img
+                  src="../../assets/img/parteners/lexoraworks.png"
+                  alt="LexoraWorks Logo"
+                  class="partner-logo"
+                  style="background-color: rgb(5, 18, 41)"
+                />
+              </div>
+            </div>
+            <!-- Partner 11 -->
+            <div class="col-md-6">
+              <div
+                class="d-flex align-items-center justify-content-between partner-item"
+                style="height: 120px"
+              >
+                <div class="partner-name text-start">DFFRNT</div>
+                <img
+                  src="../../assets/img/parteners/dffrnt.png"
+                  alt="DFFRNT Logo"
+                  class="partner-logo"
+                />
+              </div>
+            </div>
+            <!-- Partner 12 -->
+            <div class="col-md-6">
+              <div
+                class="d-flex align-items-center justify-content-between partner-item"
+                style="height: 120px"
+              >
+                <div class="partner-name text-start">Umatha Daily</div>
+                <img
+                  src="../../assets/img/parteners/umatha.jpg"
+                  alt="Umatha Daily Logo"
+                  class="partner-logo"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="text-white screens footer-screen">
+        <div class="overlays overlay-footer"></div>
+        <footer class="container py-5">
+          <div class="row">
+            <div class="col-6 px-3 col-md-3 mb-3">
+              <h5>Links</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2">
+                  <a href="../../index.html" class="nav-link p-0">Home</a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="./services.html" class="nav-link p-0">Services</a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="./about.html" class="nav-link p-0">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a href="./contact.html" class="nav-link p-0">Contacts</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-6 px-3 col-md-3 mb-3">
+              <h5>Sections</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0">To top</a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#history" class="nav-link p-0">History</a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#award" class="nav-link p-0">Award</a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#team" class="nav-link p-0">Team</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#partners" class="nav-link p-0">Partners</a>
+                </li>
+              </ul>
+            </div>
+
+            <div
+              class="col-md-5 p-2 offset-md-1 mb-3 rounded d-flex align-items-center justify-content-center bg-footer-scales"
+            >
+              <img
+                loading="lazy"
+                src="../../assets/img/icon/text-white.png"
+                height="70%"
+                alt="The Pangolins Logo"
+              />
+            </div>
+          </div>
+
+          <div
+            class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top gap-3"
+          >
+            <p>
+              <b>Your Capital Solution</b> <br />
+              &copy; 2022 The Pangolins. All rights reserved.
+            </p>
+            <div class="d-flex flex-column gap-1 align-items-center">
+              <p>Get in touch</p>
+              <ul
+                class="list-unstyled d-flex footer-socials justify-content-center"
+              >
+                <li>
+                  <a
+                    href="https://web.facebook.com/thepangolinsmw"
+                    title="Facebook Link"
+                  >
+                    <i class="bi bi-facebook"></i>
+                  </a>
+                </li>
+                <li class="ms-3">
+                  <a
+                    href="https://www.linkedin.com/company/the-pangolins/"
+                    title="Linkedin Profile"
+                  >
+                    <i class="bi bi-linkedin"></i>
+                  </a>
+                </li>
+                <li class="ms-3">
+                  <a
+                    href="https://twitter.com/thepangolinsmw"
+                    title="Twitter Link"
+                  >
+                    <i class="bi bi-twitter"></i>
+                  </a>
+                </li>
+                <li class="ms-3">
+                  <a
+                    href="https://tiktok.com/@thepangolinsmw"
+                    title="TikTok Link"
+                  >
+                    <i class="bi bi-tiktok"></i>
+                  </a>
+                </li>
+                <li class="ms-3">
+                  <a
+                    href="https://www.instagram.com/thepangolinsmw/"
+                    title="Instagram Link"
+                  >
+                    <i class="bi bi-instagram"></i>
+                  </a>
+                </li>
+                <li class="ms-3">
+                  <a
+                    href="https://wa.me/+265887249301"
+                    title="WhatsApp Contact"
+                  >
+                    <i class="bi bi-whatsapp"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script src="../../dist/js/index.js"></script>
+    <script src="../../dist/js/script.js"></script>
+    <script src="../../dist/js/papaparse.js"></script>
+    <script src="../../dist/js/scrollReveal.js"></script>
+    <script src="../../dist/js/bootstrap.bundle.js"></script>
+  </body>
+</html>

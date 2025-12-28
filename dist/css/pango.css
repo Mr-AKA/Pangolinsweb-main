@@ -1,0 +1,123 @@
+/* Custom styles for The Brand */
+
+.text-pango {
+  color: #006a39 !important;
+}
+
+.bg-pango {
+  background: #006a39 !important;
+}
+
+.bg-pango-subtle {
+  background: #006a3925 !important;
+}
+
+.bg-pango-subtle-50 {
+  background: #006a3950 !important;
+}
+
+.bg-pango-subtle-75 {
+  background: #006a3975 !important;
+}
+
+/* Custom height for mobile only */
+@media (max-width: 767px) {
+  .hero-container {
+    height: 300px !important;
+    min-height: 400px !important;
+  }
+}
+
+/* Standard height for desktop */
+@media (min-width: 768px) {
+  .hero-container {
+    height: 500px; /* or vh-100 */
+  }
+}
+
+/* CEO Section Styles */
+.ceo-accent-border {
+  border-left: 5px solid #d4af37; /* Soft Gold */
+  padding-left: 20px;
+}
+.ceo-section {
+  background-color: #ffffff;
+  padding: 80px 0;
+}
+.ceo-image-container {
+  position: relative;
+  display: inline-block;
+}
+/* Soft Gold accent box behind the image */
+.ceo-image-container::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: -20px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #d4af37;
+  z-index: 0;
+}
+.ceo-profile-img {
+  position: relative;
+  z-index: 1;
+  object-fit: cover;
+  width: 100%;
+  max-width: 450px;
+  background: #f8f9fa;
+}
+.ceo-signature {
+  font-family: "Georgia", serif;
+  font-style: italic;
+  color: #2d5a27; /* Deep Green accent for name */
+}
+
+/*COR SERVICES SECTION */
+.services-section {
+  background-color: #fcfcfc;
+  padding: 80px 0;
+}
+.service-card {
+  border: none;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  height: 100%;
+  background: #fff;
+  border-bottom: 4px solid transparent;
+}
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  border-bottom: 4px solid #d4af37; /* Soft Gold Accent */
+}
+.icon-box {
+  width: 70px;
+  height: 70px;
+  background: #f0f7f0; /* Very soft green */
+  color: #2d5a27; /* Deep Green */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  transition: 0.3s;
+}
+.service-card:hover .icon-box {
+  background: #2d5a27;
+  color: #fff;
+}
+.btn-view-services {
+  background-color: #2d5a27;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: 0.3s;
+  border: none;
+}
+.btn-view-services:hover {
+  background-color: #d4af37;
+  color: #fff;
+}
