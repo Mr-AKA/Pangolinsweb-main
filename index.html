@@ -28,75 +28,6 @@
       href="./assets/img/favicon/favicon.png"
       type="image/x-icon"
     />
-    <style>
-      :root {
-        --pango-green: #0c6b37; /* your site green */
-      }
-
-      body {
-        padding-top: 2px; /* space for fixed-top navbar */
-      }
-
-      /* Navbar styling */
-      .navbar {
-        height: 60px !important;
-        background-color: var(--pango-green);
-        z-index: 1030;
-      }
-      .navbar .navbar-brand img {
-        height: 30px;
-      }
-      .navbar .nav-link {
-        color: #fff;
-      }
-      .navbar .nav-link:hover {
-        background: rgba(255, 255, 255, 0.06);
-      }
-
-      /* Make the toggler icon visible on dark background (if using default icon) */
-      .navbar-toggler {
-        border: none;
-      }
-      .navbar-toggler-icon {
-        filter: invert(1);
-      }
-
-      /* IMPORTANT: Force vertical stacking for collapsed navbar-nav on small screens.
-       Bootstrap's .navbar-nav is a flex container; here we change its direction to column
-       when the collapse is used (<= lg breakpoint). */
-      @media (max-width: 991.98px) {
-        .navbar-collapse .navbar-nav {
-          flex-direction: column !important;
-          width: 100%;
-        }
-
-        /* Give the collapsed menu a matching background so items are readable */
-        .navbar-collapse {
-          background-color: var(--pango-green);
-          padding-bottom: 0.75rem;
-        }
-
-        /* Make links fill width and have comfortable vertical spacing */
-        .navbar-nav .nav-item {
-          text-align: center;
-        }
-        .navbar-nav .nav-link {
-          padding: 0.625rem 1rem;
-          width: 100%;
-        }
-      }
-
-      /* Desktop layout keeps horizontal menu */
-      @media (min-width: 992px) {
-        .navbar-collapse {
-          background: none !important;
-          padding: 0;
-        }
-        .navbar-nav .nav-link {
-          padding: 0.5rem 1rem;
-        }
-      }
-    </style>
   </head>
 
   <body onload="loadScrollReveal(), getNews()">
@@ -407,7 +338,7 @@
         </div>
       </section>
       <!-- PARTENERS -->
-      <section class="py-5 bg-light">
+      <section class="py-5 bg-pango-dark">
         <div class="container text-center">
           <h2 class="mb-4 fw-bold">Partners & Collaborators</h2>
 
